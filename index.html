@@ -28,6 +28,11 @@
             font-size: 1.2em;
             line-height: 1.6;
         }
+        .quote {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 20px;
+        }
         .links a {
             color: #00bcd4;
             text-decoration: none;
@@ -38,16 +43,52 @@
         .links a:hover {
             text-decoration: underline;
         }
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .project {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            width: 150px;
+            text-align: center;
+        }
+        .project a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ruasnv</h1>
-        <p>Explorer of technology, science, and philosophy. Passionate about distributed computing, AI, and the intersection of science and art.</p>
-        <p>Currently building <strong>U-nity</strong>, a blockchain-based distributed computing network.</p>
+        <h1>Rua Sanver</h1>
+        <p>Explorer of technology, science, and philosophy, with a deep interest in the computation and algorithms behind AI. My learning focus spans deep learning, high-performance computing, and the black-box nature of deep learning models through the lens of chaos theory. I am also drawn to the philosophical foundations of computer science like epistemology, linguistics where logic and meaning intersect.</p>
+        
+        <!-- Adding the quote below the bio -->
+        <p class="quote">“The noblest pleasure is the joy of understanding.” – Leonardo da Vinci</p>
+        
+        <p>Currently working on:</p>
+        <div class="projects">
+            <div class="project">
+                <p>Coming Soon</p>
+                <a href="https://github.com/ruasnv/project1" target="_blank">Project 1</a>
+            </div>
+            <div class="project">
+                <p>Coming Soon</p>
+                <a href="https://github.com/ruasnv/project2" target="_blank">Project 2</a>
+            </div>
+            <div class="project">
+                <p>Coming Soon</p>
+                <a href="https://github.com/ruasnv/project3" target="_blank">Project 3</a>
+            </div>
+        </div>
         <div class="links">
             <a href="https://github.com/ruasnv" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/ruasnv" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
         </div>
     </div>
 </body>

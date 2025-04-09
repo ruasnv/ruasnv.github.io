@@ -2,159 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ruya Sanver | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rua Sanver | Portfolio</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
       margin: 0;
       padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fdfdfb;
+      color: #1e1e1e;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 60px auto;
-      padding: 40px;
-      background-color: white;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      border-radius: 16px;
+      padding: 20px;
       text-align: center;
     }
 
     h1 {
       font-size: 2.8em;
-      margin-bottom: 10px;
-      color: #111;
+      margin-bottom: 0.2em;
+      color: #2e2e2e;
     }
 
-    h2 {
-      font-size: 1.5em;
-      color: #888;
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      margin-bottom: 20px;
+    .tagline {
+      font-size: 1.2em;
+      color: #7a7a7a;
+      margin-bottom: 40px;
+      font-style: italic;
     }
 
     .quote {
       font-style: italic;
-      color: #555;
+      color: #888;
+      margin: 30px 0 10px;
     }
 
-    .quote-citation {
-      font-size: 0.9em;
-      color: #aaa;
-      margin-top: 5px;
+    .projects-section, .blogs-section {
+      margin-top: 60px;
+      text-align: left;
     }
 
-    .projects, .blogs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .section-title {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #3a3a3a;
+      border-bottom: 2px solid #e0e0dc;
+      display: inline-block;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      margin-top: 30px;
+      justify-items: center;
     }
 
-    .project {
-      background-color: #f5f5f5;
+    .project-card {
+      background: #ffffff;
+      border: 1px solid #e2e2e2;
       border-radius: 12px;
       padding: 20px;
-      width: 220px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      text-align: center;
     }
 
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    .project-card:hover {
+      transform: translateY(-4px);
     }
 
-    .project a {
+    .project-card a {
+      color: #2d6a4f;
       text-decoration: none;
-      color: #0066cc;
       font-weight: bold;
     }
 
-    .project a:hover {
-      text-decoration: underline;
+    .blogs {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: #fbfbf8;
+      border-left: 5px solid #a3b18a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .blog-card h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .blog-card p {
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.5em;
     }
 
     .links {
-      margin-top: 40px;
+      margin-top: 60px;
+      text-align: center;
     }
 
     .links a {
+      margin: 0 15px;
       text-decoration: none;
-      color: white;
-      background-color: #111;
-      padding: 10px 18px;
-      border-radius: 8px;
-      margin: 0 10px;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
+      color: #3b7f67;
+      font-weight: 500;
     }
 
-    .links a:hover {
-      background-color: #333;
-    }
-
-    @media (max-width: 600px) {
-      .project {
-        width: 100%;
-      }
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Hi, I am still developing this site :)  But feel free to check it out regardless! </h2>
+    <h1>Rua Sanver</h1>
+    <div class="tagline">Researcher at heart. Hacker in practice.</div>
+    <p class="quote">“The noblest pleasure is the joy of understanding.” – Leonardo da Vinci</p>
 
-    <h1>Ruya Sanver</h1>
-    <p>
-      Explorer of technology, science, and philosophy. I am a third year Computer Science student
-      I’m fascinated by the foundations of computer science — where logic, linguistics, and epistemology meet.
-    </p>
-
-    <p class="quote">“The noblest pleasure is the joy of understanding.”</p>
-    <p class="quote-citation">– Leonardo da Vinci</p>
-
-    <h2>Currently working on:</h2>
-    <div class="projects">
-      <div class="project">
-        <p>U-nity: Proof of Useful Work</p>
-        <a href="https://github.com/ruasnv/Unity" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <p>Quantum Turing Machine</p>
-        <a href="https://github.com/ruasnv/quantum-turing" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project">
-        <p>Star Classifier (Astro ML)</p>
-        <a href="https://github.com/ruasnv/star-classifier" target="_blank">View on GitHub</a>
+    <div class="projects-section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project1" target="_blank">Project 1</a>
+        </div>
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project2" target="_blank">Project 2</a>
+        </div>
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project3" target="_blank">Project 3</a>
+        </div>
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project4" target="_blank">Project 4</a>
+        </div>
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project5" target="_blank">Project 5</a>
+        </div>
+        <div class="project-card">
+          <p>Coming Soon</p>
+          <a href="https://github.com/ruasnv/project6" target="_blank">Project 6</a>
+        </div>
       </div>
     </div>
 
-    <h2>Blogs</h2>
-    <div class="blogs">
-      <div class="project">
-        <p>On Chaos and Deep Learning</p>
-        <a href="https://github.com/ruasnv/blog-chaos-dl" target="_blank">Read More</a>
-      </div>
-      <div class="project">
-        <p>Why Distributed Computing is Hard</p>
-        <a href="https://github.com/ruasnv/blog-distcomp" target="_blank">Read More</a>
+    <div class="blogs-section">
+      <h2 class="section-title">Blog Posts</h2>
+      <div class="blogs">
+        <div class="blog-card">
+          <h3>Understanding Black Box AI</h3>
+          <p>A short exploration into how chaos theory and complexity science may offer insight into why deep neural networks behave the way they do.</p>
+        </div>
+        <div class="blog-card">
+          <h3>Decentralized Compute: Vision and Challenges</h3>
+          <p>Notes from building U-nity — a distributed computation network using blockchain incentives and GPU sharing.</p>
+        </div>
+        <div class="blog-card">
+          <h3>Algorithms that Learn to Think</h3>
+          <p>Discussing what it means to design intelligent systems that aren’t just trained to perform but to understand.</p>
+        </div>
       </div>
     </div>
 
     <div class="links">
       <a href="https://github.com/ruasnv" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
     </div>
+
+    <footer>
+      Made with curiosity, HTML, and green tea. <br />
+      &copy; Rua Sanver 2025
+    </footer>
   </div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+```yaml
+theme: jekyll-theme-minimal
+title: Raeya Sanver | Research Notes
+description: CS undergraduate | Research-driven | Exploring learning systems, theory, and reality through computation
+
+# Plugins, if needed (check GitHub Pages compatibility)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Enable GitHub Metadata plugin for repo listing
+github: [metadata]
+```

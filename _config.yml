@@ -1,13 +1,24 @@
-```yaml
 theme: jekyll-theme-minimal
-title: Raeya Sanver | Research Notes
+title: Raeya Sanver | Research & Projects # Changed for better overall site title
 description: CS undergraduate | Research-driven | Exploring learning systems, theory, and reality through computation
 
-# Plugins, if needed (check GitHub Pages compatibility)
+# Plugins (crucial for GitHub Pages compatibility and features)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-github-metadata # THIS IS THE ONE that enables site.github.public_repositories
 
-# Enable GitHub Metadata plugin for repo listing
-github: [metadata]
-```
+# Base URL (IMPORTANT: Leave empty for user/organization pages like ruasnv.github.io)
+baseurl: "" 
+
+# GitHub Metadata plugin configuration
+github:
+  # No explicit 'repository' needed here if the repo is ruasnv.github.io.
+  # The plugin automatically detects it.
+
+# Exclude files/folders Jekyll should ignore during build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules # If you use npm/yarn for anything
+  - vendor/ # Where Bundler installs gems locally

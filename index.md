@@ -22,14 +22,15 @@ title: Home # This is the specific title for this page (e.g., for the browser ta
   <ul id="projects-list">
     {% assign public_repos = site.github.public_repositories %}
     {% for repo in public_repos %}
-      {% if repo.description and repo.name != 'ruasnv.github.io' and repo.name != 'unimportant-repo-name' and
+      {% if repo.name != 'ruasnv.github.io' and
       repo.name != 'jax'and
       repo.name != 'keras'and
       repo.name != 'keras-cv'and
       repo.name != 'keras-io'and
       repo.name != 'openvino'and
       repo.name != 'ruasnv'and
-      repo.name != 'Stock-prediction-svm-lr'
+      repo.name != 'keras-hub'and
+      repo.name != 'stock-prediction'
       %} 
         <li>
           <a href="{{ repo.html_url }}" target="_blank">

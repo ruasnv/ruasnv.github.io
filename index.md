@@ -2,18 +2,29 @@
 layout: default
 title: Home
 ---
+<h1>Ruya Sanver</h1>---
+layout: default
+title: Home
+---
+
 <h1>Ruya Sanver</h1>
-<p><em>“The noblest pleasure is the joy of understanding.” – Leonardo da Vinci</em></p>
-<p>CS undergraduate | Aspiring Researcher | Exploring learning systems, theory and reality through computation</p>
+<p class="subtitle">Undergraduate Researcher in Computer Science | Exploring the mathematical foundations of intelligence</p>
+
+<div class="bio">
+  <p>
+    I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
+    My work bridges formal models (automata, Turing machines, Gödelian limits) with emerging paradigms in AI, 
+    exploring how complexity, chaos, and physics-inspired models shape our understanding of learning systems. 
+    I aspire to pursue graduate research at the intersection of <strong>mathematical logic, machine learning theory, and complex systems</strong>.
+  </p>
+</div>
 
 <div class="section">
-  <h2> Research Interests</h2>
+  <h2>Research Interests</h2>
   <ul>
-    <li>Theory of Computing (Automata, Turing, Gödel, Incompleteness)</li>
-    <li>Complex & Chaotic Systems in AI</li>
-    <li>Mathematics and Proofs of Deep Learning</li>
-    <li>Physics-Inspired AI Models</li>
-    <li>Distributed Computation & Compiler Theory</li>
+    <li>Foundations and Limits of Computation </li>
+    <li>Mathematical & Physical Models of Machine Learning</li>
+    <li>Chaos, Randomness, and Emergent Structure in AI</li>
   </ul>
 </div>
 

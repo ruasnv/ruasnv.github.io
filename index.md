@@ -44,13 +44,38 @@ title: Home
 </div>
 
 <div class="section">
-  <h2> Upcoming Section: Blog & Notes</h2>
-  <ul>
-    <li><strong>Understanding Black Box AI</strong> — Complexity, chaos and the inner workings of deep networks</li>
-    <li><strong>Decentralized Compute: Vision and Challenges</strong> — Notes from building Matcha</li>
-    <li><strong>Algorithms that Learn to Think</strong> — Intelligence, structure and inductive priors</li>
-  </ul>
+  <h2> Blog Posts </h2>
+  <ul id="substack-posts"></ul>
 </div>
+
+<script>
+  async function loadSubstackPosts() {
+    try {
+      const rssUrl = "https://ruaslines.substack.com/feed";
+      const response = await fetch(rssUrl);
+      const text = await response.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "application/xml");
+
+      const items = xml.querySelectorAll("item");
+      let html = "";
+      items.forEach((item, i) => {
+        if (i < 5) { // limit to 5 most recent posts
+          const title = item.querySelector("title").textContent;
+          const link = item.querySelector("link").textContent;
+          html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
+        }
+      });
+      document.getElementById("substack-posts").innerHTML = html;
+    } catch (error) {
+      console.error("Error loading Substack posts:", error);
+      document.getElementById("substack-posts").innerHTML = "<li>Unable to load posts right now.</li>";
+    }
+  }
+
+  loadSubstackPosts();
+</script>
+
 
 <div class="section">
   <h2> Contact me</h2>
@@ -62,5 +87,5 @@ title: Home
 </div>
 
 <div class="footer">
-  <p>© Ruya Sanver 2025 — Made with Jekyll, lots of coffee and persistent curiosity.</p>
+  <p>© Ruya Sanver 2025 — Made with Jekyll and lots of coffee.</p>
 </div>

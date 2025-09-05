@@ -2,10 +2,6 @@
 layout: default
 title: Home
 ---
-<h1>Ruya Sanver</h1>---
-layout: default
-title: Home
----
 
 <h1>Ruya Sanver</h1>
 <p class="subtitle">Undergraduate Researcher in Computer Science | Exploring the mathematical foundations of intelligence</p>
@@ -22,77 +18,35 @@ title: Home
 <div class="section">
   <h2>Research Interests</h2>
   <ul>
-    <li>Foundations and Limits of Computation </li>
+    <li>Foundations and Limits of Computation</li>
     <li>Mathematical & Physical Models of Machine Learning</li>
-    <li>Chaos, Randomness, and Emergent Structure in AI</li>
+    <li>Chaos, Randomness, and Emergent Dynamics in AI</li>
   </ul>
 </div>
 
 <div class="section">
   <h2> Selected Projects</h2>
-  <ul id="projects-list">
-    {% assign public_repos = site.github.public_repositories %}
-    {% for repo in public_repos %}
-      {% if repo.name != 'ruasnv.github.io' and
-      repo.name != 'jax'and
-      repo.name != 'keras'and
-      repo.name != 'keras-cv'and
-      repo.name != 'keras-io'and
-      repo.name != 'openvino'and
-      repo.name != 'ruasnv'and
-      repo.name != 'keras-hub'and
-      repo.name != 'stock-prediction'
-      %} 
-        <li>
-          <a href="{{ repo.html_url }}" target="_blank">
-            <strong>{{ repo.name | replace: "-", " " | capitalize }}</strong>
-          </a> 
-          — {{ repo.description }}
-        </li>
-      {% endif %}
-    {% endfor %}
+  <ul>
+    <li><a href="https://github.com/ruasnv/project1" target="_blank"><strong>Project One</strong></a> — Short description of project one.</li>
+    <li><a href="https://github.com/ruasnv/project2" target="_blank"><strong>Project Two</strong></a> — Short description of project two.</li>
+    <li><a href="https://github.com/ruasnv/project3" target="_blank"><strong>Project Three</strong></a> — Short description of project three.</li>
   </ul>
 </div>
 
 <div class="section">
   <h2> Blog Posts </h2>
-  <ul id="substack-posts"></ul>
+  <ul>
+    <li><a href="https://ruaslines.substack.com/p/everything-i-want-to-learn" target="_blank">everything I want to learn</a></li>
+    <li><a href="https://ruaslines.substack.com" target="_blank">See all posts →</a></li>
+  </ul>
 </div>
-
-<script>
-  async function loadSubstackPosts() {
-    try {
-      const rssUrl = "https://ruaslines.substack.com/feed";
-      const response = await fetch(rssUrl);
-      const text = await response.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, "application/xml");
-
-      const items = xml.querySelectorAll("item");
-      let html = "";
-      items.forEach((item, i) => {
-        if (i < 5) { // limit to 5 most recent posts
-          const title = item.querySelector("title").textContent;
-          const link = item.querySelector("link").textContent;
-          html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-        }
-      });
-      document.getElementById("substack-posts").innerHTML = html;
-    } catch (error) {
-      console.error("Error loading Substack posts:", error);
-      document.getElementById("substack-posts").innerHTML = "<li>Unable to load posts right now.</li>";
-    }
-  }
-
-  loadSubstackPosts();
-</script>
-
 
 <div class="section">
   <h2> Contact me</h2>
   <p>
     <a href="https://github.com/ruasnv" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/ruasnv/" target="_blank">LinkedIn</a> 
+    <a href="https://linkedin.com/in/ruasnv/" target="_blank">Linkedin</a> 
+    <a href="https://substack.com/@ruaslines" target="_blank">Substack</a> 
     <a href="mailto:ruyas7@proton.me">Email</a>
   </p>
 </div>

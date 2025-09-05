@@ -2,138 +2,133 @@
 layout: default
 title: Home
 ---
+<!-- Left Panel (optional highlights, blog, contact) -->
+<aside class="left-panel">
+  <nav id="side-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
+  </nav>
+  <footer class="footer">
+    <p>© Ruya Sanver 2025 — Made with Jekyll and lots of coffee.</p>
+  </footer>
+</aside>
 
-<div class="site-wrapper">
+<!-- Center Panel (main content) -->
+<main class="center-panel">
 
-  <!-- Left Panel (optional highlights, blog, contact) -->
-  <aside class="left-panel">
-    <nav id="side-nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-    </nav>
-    <footer class="footer">
-      <p>© Ruya Sanver 2025 — Made with Jekyll and lots of coffee.</p>
-    </footer>
-  </aside>
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Ruya Sanver</h1>
+    <p class="subtitle">
+      Undergraduate Researcher in Computer Science | Exploring the Mathematical Foundations of Intelligence
+    </p>
+  </section>
 
-  <!-- Center Panel (main content) -->
-  <main class="center-panel">
+  <!-- About Section -->
+  <section class="section bio" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
+      My work bridges formal models (automata, Turing machines, Gödelian limits) with emerging paradigms in AI.
+    </p>
+    <p>
+      I explore how complexity, chaos, and physics-inspired models shape our understanding of learning systems. 
+      I aspire to pursue graduate research at the intersection of 
+      <strong>mathematical logic, machine learning theory, and complex systems</strong>.
+    </p>
+  </section>
 
-    <!-- Home Section -->
-    <section id="home">
-      <h1>Ruya Sanver</h1>
-      <p class="subtitle">
-        Undergraduate Researcher in Computer Science | Exploring the Mathematical Foundations of Intelligence
-      </p>
-    </section>
+    <!-- Research Interests -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Foundations and Limits of Computation</li>
+      <li>Mathematical & Physical Models of Machine Learning</li>
+      <li>Chaos, Randomness, and Emergent Dynamics in AI</li>
+    </ul>
+  </section>
 
-    <!-- About Section -->
-    <section class="section bio" id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
-        My work bridges formal models (automata, Turing machines, Gödelian limits) with emerging paradigms in AI.
-      </p>
-      <p>
-        I explore how complexity, chaos, and physics-inspired models shape our understanding of learning systems. 
-        I aspire to pursue graduate research at the intersection of 
-        <strong>mathematical logic, machine learning theory, and complex systems</strong>.
-      </p>
-    </section>
-
-     <!-- Research Interests -->
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Foundations and Limits of Computation</li>
-        <li>Mathematical & Physical Models of Machine Learning</li>
-        <li>Chaos, Randomness, and Emergent Dynamics in AI</li>
-      </ul>
-    </section>
-
-    <!-- Selected Projects -->
-    <section class="section" id="projects">
-      <h2>Selected Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="https://github.com/ruasnv/project1" target="_blank">Project One</a></h3>
-          <p>Simulation of chaotic neural networks exploring emergent behavior and unpredictability in learning dynamics.</p>
-          <p class="tags">Python | ML Theory | Chaos</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/ruasnv/project2" target="_blank">Project Two</a></h3>
-          <p>Formal verification of distributed computation algorithms to analyze consistency under network delays.</p>
-          <p class="tags">Distributed Systems | Formal Methods | Algorithms</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/ruasnv/project3" target="_blank">Project Three</a></h3>
-          <p>Study of physics-inspired AI models integrating Hamiltonian dynamics into neural network training.</p>
-          <p class="tags">Python | AI | Physics</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/ruasnv/fakeproject" target="_blank">Project Four</a></h3>
-          <p>Exploring probabilistic Turing machines and their applications to learnability in complex environments.</p>
-          <p class="tags">Theory | Computation | ML</p>
-        </div>
+  <!-- Selected Projects -->
+  <section class="section" id="projects">
+    <h2>Selected Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><a href="https://github.com/ruasnv/project1" target="_blank">Project One</a></h3>
+        <p>Simulation of chaotic neural networks exploring emergent behavior and unpredictability in learning dynamics.</p>
+        <p class="tags">Python | ML Theory | Chaos</p>
       </div>
-    </section>
-
-    <!-- Experience & Highlights -->
-    <section class="section" id="experience">
-      <h2>Experience & Highlights</h2>
-      <ul class="experience-list">
-        <li>
-          <strong>Research Internship</strong> — Sabancı University Program for Undergraduate Research: Worked on FET modeling.
-        </li>
-        <li>
-          <strong>TÜBİTAK-funded Project</strong> — Contributed to a research project on [short focus], developing skills in formal modeling and experimentation.
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <!-- Right Panel (Navigation) -->
-  <aside class="right-panel">
-    <!-- Blog Posts -->
-    <section class="section" id="blog">
-      <h2>Blog Posts</h2>
-      <ul>
-        <li>
-          <a href="https://ruaslines.substack.com/p/everything-i-want-to-learn" target="_blank">
-            Everything I Want to Learn
-          </a> — My reflections on learning systems, AI theory, and personal research notes.
-        </li>
-        <li><a href="https://ruaslines.substack.com" target="_blank">See all posts →</a></li>
-      </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-icons">
-        <a href="https://github.com/ruasnv" target="_blank" title="GitHub">
-          <img src="{{ '/assets/icons/github.svg' | relative_url }}" alt="GitHub">
-        </a>
-        <a href="https://linkedin.com/in/ruasnv/" target="_blank" title="LinkedIn">
-          <img src="{{ '/assets/icons/linkedin.svg' | relative_url }}" alt="LinkedIn">
-        </a>
-        <a href="https://x.com/ruasnv" target="_blank" title="X">
-          <img src="{{ '/assets/icons/x.svg' | relative_url }}" alt="X">
-        </a>
-        <a href="https://substack.com/@ruaslines" target="_blank" title="Substack">
-          <img src="{{ '/assets/icons/substack.svg' | relative_url }}" alt="Substack">
-        </a>
-        <a href="mailto:ruyas7@proton.me" title="Email">
-          <img src="{{ '/assets/icons/email.svg' | relative_url }}" alt="Email">
-        </a>
+      <div class="project-card">
+        <h3><a href="https://github.com/ruasnv/project2" target="_blank">Project Two</a></h3>
+        <p>Formal verification of distributed computation algorithms to analyze consistency under network delays.</p>
+        <p class="tags">Distributed Systems | Formal Methods | Algorithms</p>
       </div>
-    </section>
-  </aside>
-  
-</div>
+      <div class="project-card">
+        <h3><a href="https://github.com/ruasnv/project3" target="_blank">Project Three</a></h3>
+        <p>Study of physics-inspired AI models integrating Hamiltonian dynamics into neural network training.</p>
+        <p class="tags">Python | AI | Physics</p>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://github.com/ruasnv/fakeproject" target="_blank">Project Four</a></h3>
+        <p>Exploring probabilistic Turing machines and their applications to learnability in complex environments.</p>
+        <p class="tags">Theory | Computation | ML</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Highlights -->
+  <section class="section" id="experience">
+    <h2>Experience & Highlights</h2>
+    <ul class="experience-list">
+      <li>
+        <strong>Research Internship</strong> — Sabancı University Program for Undergraduate Research: Worked on FET modeling.
+      </li>
+      <li>
+        <strong>TÜBİTAK-funded Project</strong> — Contributed to a research project on [short focus], developing skills in formal modeling and experimentation.
+      </li>
+    </ul>
+  </section>
+</main>
+
+<!-- Right Panel (Navigation) -->
+<aside class="right-panel">
+  <!-- Blog Posts -->
+  <section class="section" id="blog">
+    <h2>Blog Posts</h2>
+    <ul>
+      <li>
+        <a href="https://ruaslines.substack.com/p/everything-i-want-to-learn" target="_blank">
+          Everything I Want to Learn
+        </a> — My reflections on learning systems, AI theory, and personal research notes.
+      </li>
+      <li><a href="https://ruaslines.substack.com" target="_blank">See all posts →</a></li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="https://github.com/ruasnv" target="_blank" title="GitHub">
+        <img src="{{ '/assets/icons/github.svg' | relative_url }}" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/ruasnv/" target="_blank" title="LinkedIn">
+        <img src="{{ '/assets/icons/linkedin.svg' | relative_url }}" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/ruasnv" target="_blank" title="X">
+        <img src="{{ '/assets/icons/x.svg' | relative_url }}" alt="X">
+      </a>
+      <a href="https://substack.com/@ruaslines" target="_blank" title="Substack">
+        <img src="{{ '/assets/icons/substack.svg' | relative_url }}" alt="Substack">
+      </a>
+      <a href="mailto:ruyas7@proton.me" title="Email">
+        <img src="{{ '/assets/icons/email.svg' | relative_url }}" alt="Email">
+      </a>
+    </div>
+  </section>
+</aside>
+

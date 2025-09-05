@@ -1,4 +1,4 @@
-/* ---------- Typography ---------- */
+/* ---------- Fonts ---------- */
 @font-face {
   font-family: 'Noto Sans';
   font-weight: 400;
@@ -24,44 +24,139 @@
   src: local("Noto Sans Bold Italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2");
 }
 
+/* ---------- Base Styles ---------- */
 body {
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #222;
   background: #fafafa;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* smooth scrolling */
 }
 
-/* ---------- Headings ---------- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #111;
-  margin: 1.5rem 0 1rem;
-}
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #333; }
-h3 { font-size: 1.25rem; color: #444; }
-
-/* ---------- Links ---------- */
 a {
   color: #267CB9;
   text-decoration: none;
   transition: color 0.2s ease;
 }
+
 a:hover, a:focus {
   color: #005999;
   text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: #333; }
+h3 { font-size: 1.25rem; color: #444; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ---------- Navigation ---------- */
+#top-nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+#top-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+#top-nav li a {
+  font-weight: 500;
+}
+
 /* ---------- Sections ---------- */
 .section {
-  margin-top: 2.5rem;
-}
-.footer {
   margin-top: 3rem;
+}
+
+#hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.bio p {
+  margin-bottom: 1rem;
+}
+
+/* ---------- Projects ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .tags {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ---------- Contact Icons ---------- */
+.contact-icons {
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  transition: transform 0.2s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+}
+
+.contact-icons img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 4rem;
   font-size: 0.9rem;
   color: #666;
   border-top: 1px solid #ddd;
@@ -78,11 +173,12 @@ blockquote {
   color: #555;
 }
 
-/* ---------- Code & Highlight ---------- */
+/* ---------- Code & Pre ---------- */
 code, pre {
   font-family: Consolas, Monaco, "Courier New", monospace;
   font-size: 0.95rem;
 }
+
 pre {
   padding: 0.75rem 1rem;
   background: #f5f5f5;
@@ -91,20 +187,13 @@ pre {
   border: 1px solid #e0e0e0;
 }
 
-/* Minimal syntax highlighting colors */
-.highlight { background: #f8f8f8; }
-.highlight .k, .highlight .kd, .highlight .kn { color: #005cc5; font-weight: bold; }
-.highlight .s { color: #d73a49; }
-.highlight .c { color: #6a737d; font-style: italic; }
-.highlight .m { color: #005cc5; }
-.highlight .n { color: #24292e; }
-
 /* ---------- Tables ---------- */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
 }
+
 th, td {
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid #e5e5e5;
@@ -118,64 +207,8 @@ th, td {
     padding: 1rem;
   }
   h1 { font-size: 1.75rem; }
-}
-
-.contact-links a {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 20px;
-  text-decoration: none;
-  color: #267CB9;
-  font-weight: 500;
-}
-
-.contact-links a:hover {
-  color: #069;
-}
-
-.contact-links .icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-}
-
-#hero {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.bio p {
-  margin-bottom: 1rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.project-card h3 {
-  margin-bottom: 0.5rem;
-}
-
-.tags {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-.contact-icons a {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.contact-icons img {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
+  #top-nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }

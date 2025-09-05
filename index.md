@@ -11,8 +11,8 @@ title: Home
   </p>
 </div>
 
-<!-- Bio Section -->
-<div class="section bio">
+<!-- About Section -->
+<div class="section bio" id="about">
   <h2>About Me</h2>
   <p>
     I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
@@ -26,7 +26,7 @@ title: Home
 </div>
 
 <!-- Research Interests -->
-<div class="section">
+<div class="section" id="research">
   <h2>Research Interests</h2>
   <ul>
     <li>Foundations and Limits of Computation</li>
@@ -36,7 +36,7 @@ title: Home
 </div>
 
 <!-- Selected Projects -->
-<div class="section">
+<div class="section" id="projects">
   <h2>Selected Projects</h2>
   <div class="projects-grid">
     <div class="project-card">
@@ -63,7 +63,7 @@ title: Home
 </div>
 
 <!-- Blog Posts -->
-<div class="section">
+<div class="section" id="blog">
   <h2>Blog Posts</h2>
   <ul>
     <li>
@@ -75,8 +75,21 @@ title: Home
   </ul>
 </div>
 
+<!-- Experience & Highlights -->
+<div class="section" id="experience">
+  <h2>Experience & Highlights</h2>
+  <ul class="experience-list">
+    <li>
+      <strong>Research Internship</strong> — Sabancı University Program for Undergraduate Research: Worked on FET modeling.
+    </li>
+    <li>
+      <strong>TÜBİTAK-funded Project</strong> — Contributed to a research project on [short focus], developing skills in formal modeling and experimentation.
+    </li>
+  </ul>
+</div>
+
 <!-- Contact Section -->
-<div class="section">
+<div class="section" id="contact">
   <h2>Contact Me</h2>
   <div class="contact-icons">
     <a href="https://github.com/ruasnv" target="_blank" title="GitHub">
@@ -92,9 +105,4 @@ title: Home
       <img src="/assets/icons/email.svg" alt="Email">
     </a>
   </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
-  <p>© Ruya Sanver 2025 — Made with Jekyll and lots of coffee.</p>
 </div>

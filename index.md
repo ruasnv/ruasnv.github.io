@@ -3,18 +3,29 @@ layout: default
 title: Home
 ---
 
-<h1>Ruya Sanver</h1>
-<p class="subtitle">Undergraduate Researcher in Computer Science | Exploring the mathematical foundations of intelligence</p>
-
-<div class="bio">
-  <p>
-    I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
-    My work bridges formal models (automata, Turing machines, Gödelian limits) with emerging paradigms in AI, 
-    exploring how complexity, chaos, and physics-inspired models shape our understanding of learning systems. 
-    I aspire to pursue graduate research at the intersection of <strong>mathematical logic, machine learning theory, and complex systems</strong>.
+<!-- Hero Section -->
+<div id="hero">
+  <h1>Ruya Sanver</h1>
+  <p class="subtitle">
+    Undergraduate Researcher in Computer Science | Exploring the Mathematical Foundations of Intelligence
   </p>
 </div>
 
+<!-- Bio Section -->
+<div class="section bio">
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Science undergraduate with a deep interest in the theoretical underpinnings of computation and intelligence. 
+    My work bridges formal models (automata, Turing machines, Gödelian limits) with emerging paradigms in AI.
+  </p>
+  <p>
+    I explore how complexity, chaos, and physics-inspired models shape our understanding of learning systems. 
+    I aspire to pursue graduate research at the intersection of 
+    <strong>mathematical logic, machine learning theory, and complex systems</strong>.
+  </p>
+</div>
+
+<!-- Research Interests -->
 <div class="section">
   <h2>Research Interests</h2>
   <ul>
@@ -24,33 +35,66 @@ title: Home
   </ul>
 </div>
 
+<!-- Selected Projects -->
 <div class="section">
-  <h2> Selected Projects</h2>
-  <ul>
-    <li><a href="https://github.com/ruasnv/project1" target="_blank"><strong>Project One</strong></a> — Short description of project one.</li>
-    <li><a href="https://github.com/ruasnv/project2" target="_blank"><strong>Project Two</strong></a> — Short description of project two.</li>
-    <li><a href="https://github.com/ruasnv/project3" target="_blank"><strong>Project Three</strong></a> — Short description of project three.</li>
-  </ul>
+  <h2>Selected Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3><a href="https://github.com/ruasnv/project1" target="_blank">Project One</a></h3>
+      <p>Simulation of chaotic neural networks exploring emergent behavior and unpredictability in learning dynamics.</p>
+      <p class="tags">Python | ML Theory | Chaos</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/ruasnv/project2" target="_blank">Project Two</a></h3>
+      <p>Formal verification of distributed computation algorithms to analyze consistency under network delays.</p>
+      <p class="tags">Distributed Systems | Formal Methods | Algorithms</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/ruasnv/project3" target="_blank">Project Three</a></h3>
+      <p>Study of physics-inspired AI models integrating Hamiltonian dynamics into neural network training.</p>
+      <p class="tags">Python | AI | Physics</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/ruasnv/fakeproject" target="_blank">Project Four</a></h3>
+      <p>Exploring probabilistic Turing machines and their applications to learnability in complex environments.</p>
+      <p class="tags">Theory | Computation | ML</p>
+    </div>
+  </div>
 </div>
 
+<!-- Blog Posts -->
 <div class="section">
-  <h2> Blog Posts </h2>
+  <h2>Blog Posts</h2>
   <ul>
-    <li><a href="https://ruaslines.substack.com/p/everything-i-want-to-learn" target="_blank">everything I want to learn</a></li>
+    <li>
+      <a href="https://ruaslines.substack.com/p/everything-i-want-to-learn" target="_blank">
+        Everything I Want to Learn
+      </a> — My reflections on learning systems, AI theory, and personal research notes.
+    </li>
     <li><a href="https://ruaslines.substack.com" target="_blank">See all posts →</a></li>
   </ul>
 </div>
 
+<!-- Contact Section -->
 <div class="section">
-  <h2> Contact me</h2>
-  <p>
-    <a href="https://github.com/ruasnv" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/ruasnv/" target="_blank">Linkedin</a> 
-    <a href="https://substack.com/@ruaslines" target="_blank">Substack</a> 
-    <a href="mailto:ruyas7@proton.me">Email</a>
-  </p>
+  <h2>Contact Me</h2>
+  <div class="contact-icons">
+    <a href="https://github.com/ruasnv" target="_blank" title="GitHub">
+      <img src="/assets/icons/github.svg" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/in/ruasnv/" target="_blank" title="LinkedIn">
+      <img src="/assets/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+    <a href="https://substack.com/@ruaslines" target="_blank" title="Substack">
+      <img src="/assets/icons/substack.svg" alt="Substack">
+    </a>
+    <a href="mailto:ruyas7@proton.me" title="Email">
+      <img src="/assets/icons/email.svg" alt="Email">
+    </a>
+  </div>
 </div>
 
+<!-- Footer -->
 <div class="footer">
   <p>© Ruya Sanver 2025 — Made with Jekyll and lots of coffee.</p>
 </div>

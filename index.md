@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Home # This is the specific title for this page (e.g., for the browser tab)
+title: Home
 ---
 <h1>Ruya Sanver</h1>
 <p><em>“The noblest pleasure is the joy of understanding.” – Leonardo da Vinci</em></p>
-<p>CS undergraduate | Inspiring Researcher | Exploring learning systems, theory and reality through computation</p>
+<p>CS undergraduate | Aspiring Researcher | Exploring learning systems, theory and reality through computation</p>
 
 <div class="section">
   <h2> Research Interests</h2>

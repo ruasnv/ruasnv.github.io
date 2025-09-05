@@ -1,92 +1,92 @@
-/* ---------- Fonts ---------- */
-@font-face { font-family: 'Noto Sans'; font-weight: 400; font-style: normal; src: local("Noto Sans"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2") format("woff2"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: normal; src: local("Noto Sans Bold"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff2") format("woff2"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 400; font-style: italic; src: local("Noto Sans Italic"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2") format("woff2"); }
-@font-face { font-family: 'Noto Sans'; font-weight: 700; font-style: italic; src: local("Noto Sans Bold Italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2"); }
-
-/* ---------- Base ---------- */
 body {
-  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #222;
-  background: #fafafa;
   margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+  font-family: "Noto Sans", sans-serif;
+  background: #fafafa;
+  color: #222;
 }
 
-.container {
-  max-width: 800px;
+.site-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 200px; /* left panel, center main, right nav */
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  text-align: center;
+  padding: 2rem;
 }
 
-h1,h2,h3 { font-weight: 700; margin: 1.5rem 0 1rem; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; color: #333; }
-h3 { font-size: 1.25rem; color: #444; }
-p { margin-bottom: 1rem; }
-a { color: #267CB9; text-decoration: none; transition: 0.2s; }
-a:hover { color: #005999; text-decoration: underline; }
+.left-panel, .center-panel, .right-panel {
+  padding: 1rem;
+}
 
-/* ---------- Navigation ---------- */
-#top-nav {
+.center-panel {
+  text-align: left;
+}
+
+.right-panel {
   position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1000;
-  width: 100%;
-  border-bottom: 1px solid #ddd;
-  padding: 0.75rem 0;
+  top: 2rem;
 }
-.nav-bar { display: flex; justify-content: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
-.nav-bar li a { font-weight: 500; }
 
-/* ---------- Sections ---------- */
-.section { margin-top: 3rem; }
-#hero { padding: 2rem 0; }
-.bio p { text-align: left; }
+#side-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-/* ---------- Projects ---------- */
+#side-nav a {
+  text-decoration: none;
+  color: #267CB9;
+  font-weight: 600;
+}
+
+#side-nav a:hover {
+  color: #005999;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
 }
+
 .project-card {
   border: 1px solid #ddd;
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.project-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-.project-card h3 { margin: 0 0 0.5rem; }
-.project-card .tags { font-size: 0.85rem; color: #555; }
 
-/* ---------- Contact Icons ---------- */
-.contact-icons a { display: inline-block; margin: 0 10px; transition: transform 0.2s; }
-.contact-icons a:hover { transform: scale(1.1); }
-.contact-icons img { width: 32px; height: 32px; }
-
-/* ---------- Footer ---------- */
-.footer {
-  width: 100%;
-  background: #fafafa;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
-  color: #666;
-  padding: 1rem 0;
-  text-align: center;
-  margin-top: 3rem;
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* ---------- Responsive ---------- */
-@media screen and (max-width: 600px) {
-  body { font-size: 15px; }
-  h1 { font-size: 1.75rem; }
-  .nav-bar { flex-direction: column; gap: 0.8rem; }
+.contact-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .site-wrapper {
+    grid-template-columns: 1fr; /* stack panels vertically on smaller screens */
+  }
+  .right-panel {
+    position: static;
+  }
 }
